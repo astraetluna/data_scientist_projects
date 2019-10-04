@@ -1,5 +1,6 @@
 import sys
 import pandas as pd
+from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
     # load messages and categories dataset
@@ -20,7 +21,6 @@ def clean_data(df):
 
     # rename the columns of `categories`
     categories.columns = category_colnames
-
     # convert category values to numbers 0 or 1
     for column in categories:
         # set each value to be the last character of the string and convert column from string to numeric
@@ -31,11 +31,13 @@ def clean_data(df):
     df = df.drop(columns="categories")
     # concatenate the original dataframe with the new `categories` dataframe
     df = pd.concat([df, categories], axis=1)
-    #df.head()
+    df = df.drop_duplicates()
     return df
 
 def save_data(df, database_filename):
-    pass  
+    # save the clean dataset into an sqlite database.
+    engine = create_engine('sqlite:///' + database_filename)
+    df.to_sql('Messages', engine, index=False, if_exists='replace')   
 
 
 def main():
@@ -49,7 +51,7 @@ def main():
 
         print('Cleaning data...')
         df = clean_data(df)
-        
+        print(df)
         print('Saving data...\n    DATABASE: {}'.format(database_filepath))
         save_data(df, database_filepath)
         
