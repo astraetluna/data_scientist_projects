@@ -1,13 +1,38 @@
 import sys
-
+import pandas as pd
 
 def load_data(messages_filepath, categories_filepath):
-    pass
-
+    # load messages and categories dataset
+    messages = pd.read_csv(messages_filepath)
+    categories = pd.read_csv(categories_filepath)
+    # merge both datasets
+    df = pd.merge(right = categories, left = messages, on = "id", sort = False)
+    return df
 
 def clean_data(df):
-    pass
+    # create a dataframe of the 36 individual category columns from the dataframe 
+    categories = df["categories"].str.split(";", expand=True)
+    
+    # select the first row of the categories dataframe
+    # use this row to extract a list of new column names for categories
+    row = categories.iloc[1]
+    category_colnames = row.replace(regex=["[\-\d]"], value="")
 
+    # rename the columns of `categories`
+    categories.columns = category_colnames
+
+    # convert category values to numbers 0 or 1
+    for column in categories:
+        # set each value to be the last character of the string and convert column from string to numeric
+        categories[column] = categories[column].replace(regex=["[^\d]"], value="") 
+        categories[column] = pd.to_numeric(categories[column])
+    
+    # drop the original categories column 
+    df = df.drop(columns="categories")
+    # concatenate the original dataframe with the new `categories` dataframe
+    df = pd.concat([df, categories], axis=1)
+    #df.head()
+    return df
 
 def save_data(df, database_filename):
     pass  
