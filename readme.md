@@ -35,8 +35,23 @@ We analyze disaster data to build a model for an API that classifies new input d
 ### Repository
 https://github.com/astraetluna/disaster-response-app/
 
+
+## 3. Building Recommendation Engine Based on Collaborative Filtering and Matrix Factorization- November 2019
+The project analyses the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles. We used rank-based recommendation method, collaborative filtering and matrix factorization algorithms. The latter works by decomposing the user-item interaction matrix into the product of two lower dimensionality rectangular matrices. This family of methods became widely known during the Netflix prize challenge due to its effectiveness as reported by Simon Funk in his 2006 blog post: https://sifter.org/~simon/journal/20061211.html 
+
+
+### Libraries
+- numpy
+- pandas
+- matplotlib
+- pickle
+
+### Repository
+https://github.com/astraetluna/Recommendations-with-IBM
+
+
 # Past Projects - 2018
-## 3. Finding Donors - Supervised Learning Project
+## 4. Finding Donors - Supervised Learning Project
 
 ### About
 Evaluating and optimizing several different supervised learners to determine which algorithm will provide the highest donation yield while also reducing the total number of letters being sent.
@@ -48,7 +63,7 @@ Evaluating and optimizing several different supervised learners to determine whi
 - scikit-learn 
 - Matplotlib
 
-## 4. Image Classifier - Deep Learning with Neural Networks
+## 5. Image Classifier - Deep Learning with Neural Networks
 I implemented an image classification application. This app trains a deep learning model on a data set of images, then use the trained model to classify images. The code was developed using a Jupyter notebook to make sure your training implementation works. Then, it was converted the code to a Python application that runs from the command line. 
 
 ### Libraries
@@ -61,7 +76,7 @@ I implemented an image classification application. This app trains a deep learni
 - PIL import Image
 - matplotlib
 
-## 5. Identify Customer Segments - Unsupervised Learning
+## 6. Identify Customer Segments - Unsupervised Learning
 Analyzed relationships between demographics features, organized the population into clusters, and see how prevalent customers are in each of the segments obtained.
 
 ### Libraries
