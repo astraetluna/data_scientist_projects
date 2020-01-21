@@ -1,11 +1,11 @@
-# Current Projects 
+# Finished Projects 2019
 ## 1. How to maximize Airbnb profits? Data-Based Approach - August 2019
 Using open data from Airbnb in Seattle, we get insides into Airbnb market and what to consider before setting a price strategy for your Airbnb property. 
 
-### - Blog Post
+### Blog Post
 https://medium.com/@kasia.lauritzen/how-to-maximize-profits-on-airbnb-data-based-approach-for-hosts-beaf08f26941
 
-### - Libraries
+### Libraries
 - numpy
 - pandas
 - matplotlib
@@ -13,7 +13,7 @@ https://medium.com/@kasia.lauritzen/how-to-maximize-profits-on-airbnb-data-based
 - itertools
 - sklearn
 
-### - Repository
+### Repository
 https://github.com/astraetluna/airbnb-blogpost
 
 ## 2. Disaster Response App - Natural Language Processing with Machine Learning Pipelines  - October 2019
@@ -49,9 +49,28 @@ The project analyses the interactions that users have with articles on the IBM W
 ### Repository
 https://github.com/astraetluna/Recommendations-with-IBM
 
+## 4. Check Your YouTube Trending Potential - Natural Language Processing App - December 2019
+ YouTube maintains a list of the top trending videos on the platform. For some videos it is predictable to become trending like a new song from a popular interpreter, or a new movie trailer. For other videos, the trends can be surprising. In this project, we build an app that rates a new video title trending potential. To do this, explore trending videos in a period of six months, second we process YouTube titles with natural language algortihms and third we create a machine learning model. At the end we implement a Flask app, that rates a new video title on a trending scale.
 
-# Past Projects - 2018
-## 4. Finding Donors - Supervised Learning Project
+### Libraries
+- plotly
+- pandas
+- joblib
+- pickle
+- sklearn
+- nltk
+- sqlalchemy
+- re
+- sys
+- flask
+
+### Repository
+https://github.com/astraetluna/youtube-trending-app
+
+
+
+# Finished Projects - 2018
+## 5. Finding Donors - Supervised Learning Project
 
 ### About
 Evaluating and optimizing several different supervised learners to determine which algorithm will provide the highest donation yield while also reducing the total number of letters being sent.
@@ -63,7 +82,7 @@ Evaluating and optimizing several different supervised learners to determine whi
 - scikit-learn 
 - Matplotlib
 
-## 5. Image Classifier - Deep Learning with Neural Networks
+## 6. Image Classifier - Deep Learning with Neural Networks
 I implemented an image classification application. This app trains a deep learning model on a data set of images, then use the trained model to classify images. The code was developed using a Jupyter notebook to make sure your training implementation works. Then, it was converted the code to a Python application that runs from the command line. 
 
 ### Libraries
@@ -76,7 +95,7 @@ I implemented an image classification application. This app trains a deep learni
 - PIL import Image
 - matplotlib
 
-## 6. Identify Customer Segments - Unsupervised Learning
+## 7. Identify Customer Segments - Unsupervised Learning
 Analyzed relationships between demographics features, organized the population into clusters, and see how prevalent customers are in each of the segments obtained.
 
 ### Libraries
